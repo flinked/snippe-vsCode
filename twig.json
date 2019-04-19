@@ -1,0 +1,96 @@
+{
+	"field": {
+		"prefix": "field",
+		"body": [
+			"{{ post.meta('$1') }}"
+		],
+		"description": "field acf"
+	},
+	"Image field": {
+		"prefix": "image-field",
+		"body": [
+			"{{ Image(post.meta('$1')).src }}'"
+		],
+		"description": "image field acf"
+	},
+	"Background image": {
+		"prefix": "background-image",
+		"body": [
+			"style='background-image: url({{Image(post.meta('$1')).src}})'"
+		],
+		"description": "background image"
+	},
+	"Repeater field": {
+		"prefix": "repeater-field",
+		"body": [
+			"{% for item in post.meta('$1') %}",
+			"	{{ item.subField }}",
+			"{% endfor %}"
+		],
+		"description": "Repeater field"
+	},
+	"Relation field": {
+		"prefix": "relation-field",
+		"body": [
+			"{% for post in Post( post.meta('$1')) %}",
+			"	{{ post.title }}",
+			"{% endfor %}"
+		],
+		"description": "relation field"
+	},
+	"title": {
+		"prefix": "title",
+		"body": [
+			"{{ post.title }}"
+		],
+		"description": "title"
+	},
+	"link": {
+		"prefix": "link",
+		"body": [
+			"{{post.link}}"
+		],
+		"description": "link"
+	},
+	"site url": {
+		"prefix": "site-url",
+		"body": [
+			"{{site.url}}"
+		],
+		"description": "site url"
+	},
+	"Include components": {
+		"prefix": "components-include",
+		"body": [
+			"{% include 'views/components/$1'",
+			"	with {",
+			"		'var1': child.child1",
+			"	}",
+    	"%}"
+		],
+		"description": "Include components"
+	},
+	"Include page": {
+		"prefix": "page-include",
+		"body": [
+			"{% include 'views/pages/$1/$2'"
+		],
+		"description": "Include layout"
+	},
+	"Include layout": {
+		"prefix": "layout-include",
+		"body": [
+			"{% include 'views/layout/$1'"
+		],
+		"description": "Include layout"
+	},
+	"Add block": {
+		"prefix": "block-add",
+		"body": [
+			"{% block $1 %}",
+			"	$2",
+			"{% endblock %}"
+		],
+		"description": "Block add"
+	}
+}

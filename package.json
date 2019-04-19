@@ -1,0 +1,37 @@
+{
+	"name": "snippet-flinked",
+	"displayName": "Snippet flinked",
+	"description": "Snippet flinked",
+	"version": "0.0.1",
+	"publisher": "flinked",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./javascript.json"
+			},
+			{
+				"language": "twig",
+				"path": "./twig.json"
+			},
+			{
+				"language": "php",
+				"path": "./php.json"
+			},
+			{
+				"language": "html",
+				"path": "./php.json"
+			},
+			{
+				"language": "scss",
+				"path": "./scss.json"
+			}
+		]
+	}
+}

@@ -1,0 +1,66 @@
+{
+	"Relation field": {
+		"prefix": "relation-field",
+		"body": [
+			"<?php $posts = get_field('$1'); ?>",
+			"<?php if( $posts ): ?>",
+			"	<?php foreach( $posts as $key => $post):?>",
+			"		<?php setup_postdata($post); ?>",
+			"",
+			"		<?= get_sub_field('$2'); ?>",
+			"",
+			"	<?php endforeach; ?>",
+			"	<?php wp_reset_postdata();?>",
+			"<?php endif; ?>"
+		],
+		"description": "Relation field acf"
+	},
+	"Repeater field": {
+		"prefix": "reapeater-field",
+		"body": [
+			"<?php if( have_rows('repeater_field_name') ):",
+    	"	while ( have_rows('repeater_field_name') ) : the_row(); ?>",
+    	"",
+			"		<?= the_sub_field('sub_field_name'); ?>",
+			"",
+			"	<?php endwhile; else :",
+			"endif; ?>"
+		],
+		"description": "Relation field acf"
+	},
+	"Get field": {
+		"prefix": "get-field",
+		"body": [
+			"<?= get_field('$1') ?>"
+		],
+		"description": "Get field acf"
+	},
+	"Get sub field": {
+		"prefix": "get-sub-field",
+		"body": [
+			"<?= get_sub_field('$1') ?>"
+		],
+		"description": "Get sub field acf"
+	},
+	"Permalien": {
+		"prefix": "permalien",
+		"body": [
+			"<?= the_permalink(); ?>"
+		],
+		"description": "Permalien wordpress"
+	},
+	"Title": {
+		"prefix": "Title",
+		"body": [
+			"<?= the_title(); ?>"
+		],
+		"description": "Title wordpress"
+	},
+	"Bg": {
+		"prefix": "bg",
+		"body": [
+			"style='background-image: url('<?= get_field('$1')?>')'"
+		],
+		"description": "background image"
+	}
+}

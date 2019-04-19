@@ -1,0 +1,79 @@
+{
+	"Console log": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1', $2);"
+		],
+		"description": "console log cuntion"
+	},
+	"init": {
+		"prefix": "init",
+		"body": [
+			"class $1",
+			"{",
+			"	constructor( options )",
+			"	{",
+			"",
+			"	}",
+			"",
+			"	init() {",
+			"",
+			"	}",
+			"}",
+			"export default $1"
+		],
+		"description": "init class"
+	},
+	"Event": {
+		"prefix": "event",
+		"body": [
+			"element.addEventListener('$1', (e) => {",
+			"",
+			"})"
+		],
+		"description": "Event listner"
+	},
+	"OffsetWidth": {
+		"prefix": "offsetW",
+		"body": [
+			"$1.offsetWidth"
+		],
+		"description": "OffsetWidth"
+	},
+	"Offsetheight": {
+		"prefix": "offsetH",
+		"body": [
+			"$1.offsetheight"
+		],
+		"description": "Offsetheight"
+	},
+	"init script": {
+		"prefix": "init-script",
+		"body": [
+			"let $1 = new $2();",
+			"$1.init();"
+		],
+		"description": "init script script"
+	},
+	"selector": {
+		"prefix": "selector",
+		"body": [
+			"document.querySelector('$1')"
+		],
+		"description": "init script script"
+	},
+	"selectorAll": {
+		"prefix": "selectorAll",
+		"body": [
+			"document.querySelectorAll('$1')"
+		],
+		"description": "init script script"
+	},
+	"backquote": {
+		"prefix": "backquote",
+		"body": [
+			"`${$1}`"
+		],
+		"description": "init script script"
+	}
+}
