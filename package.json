@@ -2,8 +2,9 @@
 	"name": "snippet-flinked",
 	"displayName": "Snippet flinked",
 	"description": "Snippet flinked",
-	"version": "0.0.1",
-	"publisher": "flinked",
+	"version": "0.0.2",
+	"publisher": "alexbenoliel",
+	"repository": "https://github.com/flinked/snippe-vsCode",
 	"engines": {
 		"vscode": "^1.28.0"
 	},
